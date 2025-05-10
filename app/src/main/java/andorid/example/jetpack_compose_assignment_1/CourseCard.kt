@@ -71,18 +71,19 @@ fun CourseCard(courses:CourseModel ){
             }
             Row(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
+                verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier.padding(8.dp)
                 ) {
                 Text(text = "Course code:${courses.courseCode}",
                     color = MaterialTheme.colorScheme.primary,
-                    style = MaterialTheme.typography.bodyMedium
+                    style = MaterialTheme.typography.bodyLarge
                 )
                 Text(text = "Course Credit hour: ${courses.creditHours}")
 
             }
             if (expand){
                 Text(text = courses.description,
-                    style = MaterialTheme.typography.bodyMedium)
+                    style = MaterialTheme.typography.bodyLarge)
             }
         }
     }
